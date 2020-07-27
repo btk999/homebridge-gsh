@@ -30,7 +30,8 @@ export class Plugin {
     };
 
     // establish new websocket connection
-    const socket = new WebSocket(`wss://homebridge-gsh.iot.oz.nu/socket?${querystring.stringify(qs)}`);
+    //const socket = new WebSocket(`wss://homebridge-gsh.iot.oz.nu/socket?${querystring.stringify(qs)}`);
+    const socket = new WebSocket(`wss://gsh.dueselder.net/socket?${querystring.stringify(qs)}`);
 
     this.hap = new Hap(socket, this.log, this.homebridgeConfig.bridge.pin, this.config);
 
